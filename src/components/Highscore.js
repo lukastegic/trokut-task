@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Highscore = (props) => {
-  return 
-    <div>Trenutni highscore: {props.highscore} </div>
-}
+const Highscore = ({ highscore, sime, a, b }) => {
+  return (
+    <div>
+      {sime} - Trenutni {a} highscore {b}: {highscore}
+    </div>
+  );
+};
 
-export default Highscore
+export default Highscore;
