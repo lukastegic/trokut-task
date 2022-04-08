@@ -6,7 +6,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      highscore: 100,
+      highscore: [],
       brojPokusaja: 0,
       feedback: "",
       zamisljeniBroj: Math.floor(Math.random() * 101),
@@ -18,6 +18,7 @@ export default class App extends Component {
       let noviBroj = Math.floor(Math.random() * 101);
       this.setState({
         ...this.state,
+        highscore: [...this.state.highscore, this.state.brojPokusaja + 1],
         brojPokusaja: 0,
         zamisljeniBroj: noviBroj,
         feedback:
